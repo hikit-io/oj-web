@@ -28,8 +28,8 @@ onResult(param => {
 })
 
 onError(param => {
+  console.log(param.message)
   token.del()
-  // router.push('/')
   window.location.href = `https://auth.hikit.io/?from=https://oj.hikit.io`
 })
 

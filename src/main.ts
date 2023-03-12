@@ -3,7 +3,7 @@ import './style.css'
 import App from './App.vue'
 import {createRouter, createWebHistory} from "vue-router";
 import '@varlet/touch-emulator'
-import {DefaultApolloClient} from "@vue/apollo-composable";
+import {ApolloClients, DefaultApolloClient} from "@vue/apollo-composable";
 import {ApolloClient, createHttpLink, InMemoryCache} from "@apollo/client/core";
 
 const router = createRouter({
@@ -33,4 +33,7 @@ const apolloClient = new ApolloClient({
 createApp(App)
     .use(router)
     .provide(DefaultApolloClient, apolloClient)
+    .provide(ApolloClients,{
+        auth: apolloClient
+    })
     .mount('#app')
