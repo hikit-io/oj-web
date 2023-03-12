@@ -2,14 +2,14 @@
 import {useAppBar} from "../composable/useAppBar";
 import {useAccessToken} from "../composable/useAccessToken";
 
-const {showRight, onProfile, logout} = useAppBar()
+const {onProfile, logout} = useAppBar()
 
 const {name} = useAccessToken()
 
 </script>
 
 <template>
-  <var-menu v-if="showRight" placement="bottom" trigger="hover" :same-width="true">
+  <var-menu placement="bottom" trigger="hover" :same-width="true">
     <var-button text>
       {{ name }}
       <var-icon name="chevron-down"></var-icon>

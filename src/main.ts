@@ -8,7 +8,12 @@ import {ApolloClient, createHttpLink, InMemoryCache} from "@apollo/client/core";
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: [],
+    routes: [
+        {
+            path: '/',
+            component: () => import("./views/index/Index.vue")
+        }
+    ],
 })
 
 const httpLink = createHttpLink({
