@@ -19,7 +19,9 @@ provide(AppBar, appBarContext as AppBarContext)
 const router = useRouter()
 const token = useAccessToken()
 
-const {load, onResult, onError} = useGetNameLazyQuery()
+const {load, onResult, onError} = useGetNameLazyQuery({
+  clientId: 'auth'
+})
 
 onResult(param => {
   if (param.data.profile) {
