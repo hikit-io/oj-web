@@ -31,8 +31,8 @@ onResult(param => {
 
 onError(param => {
   console.log(`error:${param.message}`)
-  // token.del()
-  // window.location.href = `https://auth.hikit.io/?from=https://oj.hikit.io`
+  token.del()
+  window.location.href = `https://auth.hikit.io/?from=https://oj.hikit.io`
 })
 
 
