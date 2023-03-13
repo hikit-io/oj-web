@@ -23,6 +23,5 @@ declare module '@vue/runtime-core' {
     VarMenu: typeof import('@varlet/ui')['_MenuComponent']
     VarRow: typeof import('@varlet/ui')['_RowComponent']
     VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
-    VarTable: typeof import('@varlet/ui')['_TableComponent']
   }
 }
